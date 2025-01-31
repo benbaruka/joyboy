@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 type Props = {
   answer: string;
   question: string;
@@ -15,7 +16,9 @@ export function FaqBar({question, answer, isOpen, onClick}: Props) {
       >
         <div className="flex justify-between items-center">
           <h2 className="desktop:text-[20px] text-xs leading-[28px]">{question}</h2>
-          <img
+          <Image
+            width={20}
+            height={20}
             src="/assets/down-cheveron.svg"
             alt="Toggle"
             className={isOpen ? 'transform rotate-180' : 'transform rotate-0'}
