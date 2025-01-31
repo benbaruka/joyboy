@@ -2,7 +2,7 @@ import {useState} from 'react';
 import {FaqBar} from './FaqBar';
 
 export function Faq() {
-  const [openQuestion, setOpenQuestion] = useState(null);
+  const [openQuestion, setOpenQuestion] = useState<number | null>(null);
 
   const faqData = [
     {
@@ -27,7 +27,7 @@ export function Faq() {
     },
   ];
 
-  const handleToggle = (index) => {
+  const handleToggle = (index: number) => {
     setOpenQuestion(openQuestion === index ? null : index);
   };
 
@@ -37,7 +37,7 @@ export function Faq() {
         Frequently Asked Questions
       </h2>
       <div className="flex flex-col gap-y-[24px] items-center w-full">
-        {faqData.map((item, index) => (
+        {faqData.map((item, index: number) => (
           <FaqBar
             key={index}
             question={item.question}
