@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import React from 'react';
 type Props = {
   answer: string;
   question: string;
@@ -15,7 +15,11 @@ export function FaqBar({question, answer, isOpen, onClick}: Props) {
       >
         <div className="flex justify-between items-center">
           <h2 className="desktop:text-[20px] text-xs leading-[28px]">{question}</h2>
-          <img src={isOpen ? '/assets/up-chevron.svg' : '/assets/down-chevron.svg'} alt="Toggle" />
+          <img
+            src="/assets/down-cheveron.svg"
+            alt="Toggle"
+            className={isOpen ? 'transform rotate-180' : 'transform rotate-0'}
+          />
         </div>
         {isOpen && (
           <div className="w-full text-start mt-6">
