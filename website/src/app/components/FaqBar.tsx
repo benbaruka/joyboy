@@ -15,7 +15,7 @@ export function FaqBar({question, answer, isOpen, onClick}: Props) {
       >
         <div className="flex justify-between items-center">
           <h2 className="desktop:text-[20px] text-xs leading-[28px]">{question}</h2>
-          <img src="/assets/down-chevron.svg" alt="" />
+          <img src={isOpen ? '/assets/up-chevron.svg' : '/assets/down-chevron.svg'} alt="Toggle" />
         </div>
         {isOpen && (
           <div className="w-full text-start mt-6">
