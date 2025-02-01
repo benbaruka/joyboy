@@ -36,7 +36,7 @@ export function Footer() {
           >
             <img
               src="/assets/twitterIcon.svg"
-              alt="Joyboy Community Twitter / X"
+              alt="Joyboy Community Twitter/X"
               className=" w-[42px] h-[42px]"
             />
           </a>
